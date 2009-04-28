@@ -1,0 +1,26 @@
+h1. Cruisecontrol.rb plugin cap_deployer
+
+p. This plugin will deploy your app using capistrano.
+
+h2. How it works
+
+p. If the build fails the app won't de be deployed and if it passes it will try to deploy to a list of stages you can supply.
+It will send an email notifying if it was successful or not and a special artifact with the capistrano output will be created.
+
+h2. Installation
+
+p. Copy the cap_deployer.rb file to the lib/builder_plugins/ directory.
+
+h2. Configuration
+
+p. In your project's cruise_config.rb file:
+
+p. Set the email addresses which should be notified about deployment
+bc. project.cap_deployer.emails = ['email@example.com']
+
+p. Pass an array of stages you want to deploy to
+bc. project.cap_deployer.stages = ['staging','production']
+
+h2. Facts
+
+p. *Important:* this plugin assumes you are using ssh keys for deployment
