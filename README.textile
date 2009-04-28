@@ -15,11 +15,15 @@ h2. Configuration
 
 p. In your project's cruise_config.rb file:
 
-p. Set the email addresses which should be notified about deployment
-bc. project.cap_deployer.emails = ['email@example.com']
+p. Set the email addresses which should be notified about deployment: 
+<pre><code>
+project.cap_deployer.emails = ['email@example.com']
+</code></pre>
 
 p. Pass an array of stages you want to deploy to
-bc. project.cap_deployer.stages = ['staging','production']
+<pre><code>
+project.cap_deployer.stages = ['staging','production']
+</code></pre>
 
 h2. Facts
 
